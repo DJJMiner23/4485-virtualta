@@ -7,7 +7,7 @@ body {
 
 header {
     background-color: #e87500;
-    padding: 0.1em;
+    padding: 0.1em
 }
 
 .heading {
@@ -16,24 +16,27 @@ header {
 }
 
 .tagline {
+    font-size: 20px;
     font-weight: 400;
     font-style: italic;
 }
 
 /* Add a dark green background color to the top navigation */
 .topnav {
+    width: 100%;
     background-color: #154734;
-    overflow: hidden;
+    overflow: auto;
   }
   
   /* Style the links inside the navigation bar */
   .topnav a {
     float: left;
     color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
+    padding: 12px;
     text-decoration: none;
     font-size: 17px;
+    width: 31%;
+    text-align: center;
   }
   
   /* Change the color of links on hover */
@@ -44,6 +47,7 @@ header {
 
 footer {
     background-color: #154734;
+    padding: 0.1em;
     color: #fff;
     position: absolute;
     bottom: 0;
