@@ -11,17 +11,11 @@ header {
 }
 
 df-messenger {
-  /* z-index: 999;
     position: fixed;
-    width: 350px;
-    height: 400px;
-    left: 70%;
-    top: 60%;
-    transform: translate(-50%, -50%); */
-  z-index: 999;
-  position: fixed;
-  bottom: 16px;
-  right: 16px;
+    top: 270px;
+    right: 10px;
+    width: 700px;
+    height: 450px;
 }
 
 .heading {
