@@ -12,6 +12,8 @@ header {
 
 .flex-container {
   display: flex;
+  height: fit-content;
+  max-height: 500px;
 }
 
 .welcome-image {
