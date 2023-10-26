@@ -5,6 +5,15 @@ body {
   font-weight: 400;
 }
 
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden; /* Optional: Hide horizontal scrollbar if content overflows */
+}
+
+
 header {
   background-color: #e87500;
   padding: 0.5em;
@@ -32,12 +41,32 @@ header {
 
 .welcome-image {
   width: 50%;
+  opacity: 0; /* Set initial opacity to 0 */
+  animation: fadeIn 2s forwards; /* Fade-in animation with 2s duration */
 }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 
 df-messenger {
     position: relative;
     width: 50%;
     --df-messenger-titlebar-background: #5fe0b7; 
+    --df-messenger-message-bot-background: #5fe0b7;
+    --df-messenger-message-user-background: #a3a2a0;
+    --df-messenger-font-family: "Urbanist", sans-serif;
+    --df-messenger-titlebar-title-align: center;
+    --df-messenger-titlebar-title-font-weight: 1000;
+    --df-messenger-chat-background: #ffffff;
+    --df-messenger-send-icon-color-hover: #5fe0b7;
+    --df-messenger-send-icon-color-active: #0c452f;
 }
 
 /* Typing Animation for Header */
@@ -77,9 +106,6 @@ df-messenger {
   bottom: 0;
 }
 
-
-
-
 .heading {
   font-size: 36px;
   font-weight: 900;
@@ -89,7 +115,7 @@ df-messenger {
   font-size: 20px;
   font-weight: 400;
   font-style: italic;
-  animation: fadeInOut 3s ease infinite; /* 3s duration, ease timing function, infinite loop */
+  animation: fadeInOut 5s ease infinite; /* 3s duration, ease timing function, infinite loop */
 }
 
 /* Add a dark green background color to the top navigation */
@@ -122,7 +148,19 @@ footer {
   padding: 0.5em;
   color: #fff;
   position: relative;
-  bottom: 0;
+  bottom: -100px; /* Initially position the footer below the viewport */
   width: 100%;
   height: 5em;
+  animation: slideIn 1s forwards; /* Slide-in animation with 1s duration */
 }
+
+@keyframes slideIn {
+  0% {
+    bottom: -100px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+
