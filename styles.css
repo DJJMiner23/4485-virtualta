@@ -10,6 +10,7 @@ header {
   padding: 0.5em;
 }
 
+
 /* CSS Animation for Tagline */
 @keyframes fadeInOut {
   0% {
@@ -36,7 +37,48 @@ header {
 df-messenger {
     position: relative;
     width: 50%;
+    --df-messenger-titlebar-background: #5fe0b7; 
 }
+
+/* Typing Animation for Header */
+@keyframes typing {
+  0% {
+    width: 0;
+    margin-left: 50%; /* Start typing from the center of the container */
+    transform: translateX(-50%); /* Center the text horizontally */
+  }
+  100% {
+    width: 100%;
+    margin-left: 0;
+    transform: translateX(0);
+  }
+}
+
+.heading {
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  animation: typing 4s steps(70) forwards, blink 0.5s infinite step-end;
+}
+
+/* Optional: Add a blinking cursor animation */
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.heading::after {
+  border-right: 3px solid #000;
+  margin-left: 5px;
+  position: absolute;
+  bottom: 0;
+}
+
+
+
 
 .heading {
   font-size: 36px;
