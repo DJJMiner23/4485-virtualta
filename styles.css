@@ -7,7 +7,20 @@ body {
 
 header {
   background-color: #e87500;
-  padding: 0.1em;
+  padding: 0.5em;
+}
+
+/* CSS Animation for Tagline */
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .flex-container {
@@ -26,7 +39,7 @@ df-messenger {
 }
 
 .heading {
-  font-size: 50px;
+  font-size: 36px;
   font-weight: 900;
 }
 
@@ -34,6 +47,7 @@ df-messenger {
   font-size: 20px;
   font-weight: 400;
   font-style: italic;
+  animation: fadeInOut 3s ease infinite; /* 3s duration, ease timing function, infinite loop */
 }
 
 /* Add a dark green background color to the top navigation */
@@ -58,11 +72,12 @@ df-messenger {
 .topnav a:hover {
   background-color: #fff;
   color: black;
+  transition: all 0.3s ease;
 }
 
 footer {
   background-color: #0c452f;
-  padding: 0.1em;
+  padding: 0.5em;
   color: #fff;
   position: relative;
   bottom: 0;
