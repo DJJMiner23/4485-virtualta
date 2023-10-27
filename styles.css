@@ -15,24 +15,9 @@ body, html {
   overflow-x: hidden; /* Optional: Hide horizontal scrollbar if content overflows */
 }
 
-
 header {
   background-color: #e87500;
   padding: 0.5em;
-}
-
-
-/* CSS Animation for Tagline */
-@keyframes fadeInOut {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
 }
 
 .flex-container {
@@ -55,7 +40,6 @@ header {
     opacity: 1;
   }
 }
-
 
 df-messenger {
     position: relative;
@@ -118,12 +102,32 @@ df-messenger {
   font-weight: 900;
 }
 
+/* Your existing styles go here */
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 .tagline {
   font-size: 20px;
   font-weight: 400;
   font-style: italic;
-  animation: fadeInOut 5s ease infinite; /* 3s duration, ease timing function, infinite loop */
+  opacity: 0; /* Set initial opacity to 0 */
+  animation: fadeInOut 3s ease infinite; /* Fade-in and fade-out animation with 3s duration */
 }
+
+
 
 /* Add a dark green background color to the top navigation */
 .topnav {
@@ -170,5 +174,3 @@ footer {
     bottom: 0;
   }
 }
-
-
