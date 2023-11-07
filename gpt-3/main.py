@@ -5,12 +5,21 @@
 from llama_index import GPTVectorStoreIndex, SimpleDirectoryReader
 import os
 
-os.environ['OPENAI_API_KEY'] = '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'
+os.environ['OPENAI_API_KEY'] = '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'
 
 reader = SimpleDirectoryReader("./data")
 documents = reader.load_data()
 index = GPTVectorStoreIndex(documents)
 
 query_engine = index.as_query_engine()
-response = query_engine.query("what should I study for exam 1?")  # insert question here
-print(response)
+
+while True:
+    question = input()
+    if question == 'bye':
+        break
+    else:
+        response = query_engine.query(question)
+        print(response)
+
+# response = query_engine.query("what is covered on exam 3")  # insert question here
+# print(response)
